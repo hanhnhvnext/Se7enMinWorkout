@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Se7enMinWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="7 Minutes Workout" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SL9-ht-XDf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Poi-Oy-apv"/>
+                                </constraints>
+                                <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVj-ih-9IV">
+                                <rect key="frame" x="0.0" y="656" width="414" height="80"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QGO-7k-xF1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Start Workout">
+                                    <color key="titleColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-LM-iVW">
+                                <rect key="frame" x="0.0" y="150" width="414" height="506"/>
+                                <connections>
+                                    <segue destination="y8h-uM-Gsw" kind="embed" identifier="containerSegue" id="XlG-WH-Z2U"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sVj-ih-9IV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="10r-zw-YiI"/>
+                            <constraint firstItem="sVj-ih-9IV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8pB-69-xst"/>
+                            <constraint firstItem="SL9-ht-XDf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BPn-Tv-3oL"/>
+                            <constraint firstItem="SL9-ht-XDf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V0z-Y1-imO"/>
+                            <constraint firstItem="SL9-ht-XDf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VaG-6x-3iA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8M-LM-iVW" secondAttribute="trailing" id="Y2G-Nk-UjS"/>
+                            <constraint firstItem="sVj-ih-9IV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zo0-ej-mNa"/>
+                            <constraint firstItem="sVj-ih-9IV" firstAttribute="top" secondItem="b8M-LM-iVW" secondAttribute="bottom" id="ivm-oR-mBq"/>
+                            <constraint firstItem="b8M-LM-iVW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tbP-S6-SHJ"/>
+                            <constraint firstItem="b8M-LM-iVW" firstAttribute="top" secondItem="SL9-ht-XDf" secondAttribute="bottom" id="w6n-x6-ghi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Blg-rv-Hbz">
+            <objects>
+                <tableViewController id="y8h-uM-Gsw" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nzp-my-S65">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="506"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lJU-H3-7Ct">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJU-H3-7Ct" id="elm-RF-mNY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y8h-uM-Gsw" id="SgC-4p-W8t"/>
+                            <outlet property="delegate" destination="y8h-uM-Gsw" id="oXl-RI-nMn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d04-If-4dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="118"/>
+        </scene>
+    </scenes>
+</document>
